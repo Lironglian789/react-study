@@ -1,12 +1,14 @@
 import React from 'react';
 import ContextPage from './pages/ContextPage'
-import RCField from './pages/RCFieldForm'
+import MyRCFieldForm from './pages/MyRCFieldForm'
+import MyRCForm from './pages/MyRCForm'
 
 function App() {
   return (
     <div>
       <ContextPage />
-      <RCField />
+      <MyRCFieldForm />
+      <MyRCForm />
     </div>
   );
 }

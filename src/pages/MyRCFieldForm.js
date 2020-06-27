@@ -13,9 +13,10 @@ export default function RCFieldForm () {
   const onFailed = val => {
     console.log('onFailed:', val)
   }
+  // 第二个参数不传时，每次更新都会重新渲染，有参数则根据参数判断，发生改变则渲染，传空数组则只渲染一次
   useEffect(() => {
     console.log('form',  form)
-  }, [])
+  }, [form])
   return (
     <div>
       <h3>MyRCFieldForm</h3>
