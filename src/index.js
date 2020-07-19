@@ -30,7 +30,6 @@ class ClassComponent extends Component {
   }
 }
 
-
 const jsx = (
   <div>
     <p>全栈</p>
@@ -47,10 +46,15 @@ const jsx = (
         </React.Fragment>
       ))
     } */}
-    <> 
+    {/* <> 
       <h1>1</h1>
       <h2>2</h2>
     </>
+    {
+      [1,2].map(item => (
+       <p key={item}>{item}</p>
+      ))
+    } */}
   </div>
 )
 
