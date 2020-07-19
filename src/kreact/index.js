@@ -11,7 +11,7 @@ function createElement (type, config, ...children) {
     children: children.map(child => typeof child === 'object'? child : createTextNode(child))
   }
   // 处理defaultProps
-  console.log(type)
+  // console.log(type)
   if (type && type.defaultProps) {
     const defaultProps = type.defaultProps
     for (let propName in defaultProps) {

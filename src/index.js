@@ -1,18 +1,24 @@
 import './index.css';
-// import React, {Component} from 'react';
+// import React, {Component, useState} from 'react';
 // import ReactDOM from 'react-dom';
 
 import React from './kreact';
-import ReactDOM from './kreact/kreact-dom';
+import ReactDOM, {useState} from './kreact/kreact-dom';
 import Component  from './kreact/Component';
 
+// import UseMemoPage from './pages/UseMemoPage'
+// import UseCallbackPage from './pages/UseCallbackPage'
+
 function FunctionComponent (props) {
+  const [count, setCount] = useState(1)
   function handleClick() {
-    console.log(11)
+    console.log('omg');
+    setCount(count + 1)
   }
   return <div className="border">
     FunctionComponent-{props.name}
-    <button onClick={handleClick}>点击</button>
+    <button onClick={handleClick}>{count}</button>
+    {count%2? <button>click</button> : <span>omg</span>}
   </div>
 }
 
@@ -36,25 +42,10 @@ const jsx = (
     <a href="https://www.kaikeba.com/">开课吧</a>
     <FunctionComponent name="function" />
     <ClassComponent name='class' />
-    {/* Fragment 的两种写法*/}
-    {/* 1. <></> 无法传参 */}
-    {/* 2.  <React.Fragment></React.Fragment> 可以传参 */} 
-    {/* {
-      [1,2].map(item => (
-        <React.Fragment key={item}>
-           {item}
-        </React.Fragment>
-      ))
-    } */}
-    {/* <> 
-      <h1>1</h1>
-      <h2>2</h2>
-    </>
-    {
-      [1,2].map(item => (
-       <p key={item}>{item}</p>
-      ))
-    } */}
+
+    {/* homework */}
+    {/* <UseMemoPage /> */}
+    {/* <UseCallbackPage /> */}
   </div>
 )
 
